@@ -17,7 +17,15 @@ class SquareGenerator:
 import math
 
 square_generator = SquareGenerator()
-squares = square_generator.generate_squares(1, 10)
+squares = square_generator.generate_squares(1, 0)
 square_roots = [math.sqrt(x) for x in squares]
-print(square_roots)
 
+
+
+# Task5
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+        if end < start:
+            raise ValueError("End must be greater than start")
+        return [x**2 for x in range(start, end + 1)]
